@@ -63,3 +63,6 @@ Help
 We welcome comments, contributions, bug reports, wiki documentation, etc.
 
 *Jep Team*
+
+.. image:: https://travis-ci.org/ganesh47/scala-python-bindings.svg?branch=master
+    :target: https://travis-ci.org/ganesh47/scala-python-bindings
