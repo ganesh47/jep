@@ -491,7 +491,7 @@ jobject PyObject_As_jobject(JNIEnv *env, PyObject *pyobject,
     } else if (PyDict_Check(pyobject)) {
         return pydict_as_jobject(env, pyobject, expectedType);
 #if JEP_NUMPY_ENABLED
-    } else if (npy_array_check(pyobject)) {
+    } else if ((!(PyModule_Check(pyobject)||PyType_Check(pyobject)||PyFunction_Check(pyobject))) && npy_array_check(pyobject) ) {
         if ((*env)->IsAssignableFrom(env, JEP_NDARRAY_TYPE, expectedType)) {
             return convert_pyndarray_jndarray(env, pyobject);
         } else {
