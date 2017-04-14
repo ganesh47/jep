@@ -2,10 +2,9 @@ sudo: required
 dist: trusty
 
 language: python
-
+#Add - "3.2" after the shared object python install on trusty gets fixed! https://github.com/docker-library/python/issues/21
 python:
   - "2.7"
-  - "3.2"
   - "3.3"
   - "3.4"
   - "3.5"
